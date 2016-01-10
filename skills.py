@@ -157,8 +157,10 @@ def word_lengths(word_list):
         [5, 3, 5, 4]
 
     """
-
-    return []
+    lengths = []
+    for word in word_list:
+        lengths.append(len(word))
+    return lengths
 
 
 def sum_numbers(number_list):
@@ -176,8 +178,10 @@ def sum_numbers(number_list):
         0
 
     """
-
-    return None
+    total = 0
+    for num in number_list:
+        total += num
+    return total
 
 
 def mult_numbers(number_list):
@@ -198,8 +202,11 @@ def mult_numbers(number_list):
         1
 
     """
+    total = 1
+    for num in number_list:
+        total = total * num
+    return total
 
-    return None
 
 
 def join_strings(word_list):
@@ -217,8 +224,11 @@ def join_strings(word_list):
         ''
 
     """
+    bigword = ''
+    for word in word_list:
+        bigword = bigword + word
+    return bigword
 
-    return "Not the right thing"
 
 
 def average(number_list):
@@ -231,7 +241,11 @@ def average(number_list):
     this raises an error when given an empty list.
     """
 
-    return 0
+    total = 0
+    for num in number_list:
+        total += num
+    avg = total/float(len(number_list))
+    return avg
 
 
 def join_strings_with_comma(list_of_words):
@@ -247,13 +261,18 @@ def join_strings_with_comma(list_of_words):
         'Pretzel'
 
     """
-
-    return ""
+    bigword = ''
+    for i in range(len(list_of_words)-1):
+        bigword = bigword + list_of_words[i] +", "
+    bigword = bigword + list_of_words[-1]
+            
+    return bigword
 
 
 ##############################################################################
 # END OF ASSIGNMENT: You can ignore everything below.
 
+print join_strings_with_comma(["Labrador", "Poodle", "French Bulldog"])
 
 if __name__ == "__main__":
     import doctest
