@@ -32,7 +32,11 @@ def all_even(number_list):
 
     """
 
-    return ['the wrong thing']
+    all_evens = []
+    for num in number_list:
+        if num % 2 == 0:
+            all_evens.append(num)
+    return all_evens
 
 
 def print_indexes(my_list):
