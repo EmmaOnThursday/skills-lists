@@ -73,8 +73,12 @@ def long_words(word_list):
         []
 
     """
+    long_words = []
+    for word in word_list:
+        if len(word) > 4:
+            long_words.append(word)
 
-    return ['the wrong thing']
+    return long_words
 
 
 def smallest_int(number_list):
@@ -96,8 +100,11 @@ def smallest_int(number_list):
         True
 
     """
-
-    return 100
+    sorted_list = sorted(number_list)
+    try:
+        return sorted_list[0]
+    except IndexError:
+        return None
 
 
 def largest_int(number_list):
@@ -118,8 +125,11 @@ def largest_int(number_list):
 
     """
 
-    return 0
-
+    sorted_list = sorted(number_list)
+    try:
+        return sorted_list[-1]
+    except IndexError:
+        return None
 
 def halvesies(number_list):
     """Return list of numbers from input list, each divided by two.
@@ -133,8 +143,11 @@ def halvesies(number_list):
         [0.5, 2.5]
 
     """
+    halvesies = []
+    for num in number_list:
+        halvesies.append(num / 2.0)
 
-    return []
+    return halvesies
 
 
 def word_lengths(word_list):
