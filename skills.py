@@ -272,7 +272,6 @@ def join_strings_with_comma(list_of_words):
 ##############################################################################
 # END OF ASSIGNMENT: You can ignore everything below.
 
-print join_strings_with_comma(["Labrador", "Poodle", "French Bulldog"])
 
 if __name__ == "__main__":
     import doctest
